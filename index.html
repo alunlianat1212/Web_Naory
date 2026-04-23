@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naory Bakery - Yummy & Sweet</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animasi -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Leaflet CSS untuk Peta -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="Naory.png" alt="Logo Naory Bakery" id="logo-img" style="width: 50px; height: 50px; object-fit: cover; border-radius: 10%; margin-right: 0px;">
+                    <span class="brand-name">Naory Bakery</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#produk">Produk</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#transaksi">Pesan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#lacak">Lacak</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#saran">Saran</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <!-- Hero / Carousel Section -->
+        <section id="home" class="hero-section">
+            <div id="cakeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#cakeCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#cakeCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#cakeCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="cake1.jpg" class="d-block w-100" alt="Kue Coklat">
+                        <div class="carousel-caption">
+                            <h5 class="animate-title">Rasakan Kelembutan Setiap Gigitan</h5>
+                            <p>Kue homemade dengan cita rasa istimewa</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="cake2.jpg" class="d-block w-100" alt="Kue Keju">
+                        <div class="carousel-caption">
+                            <h5 class="animate-title">Fresh from the Oven</h5>
+                            <p>Dipanggang setiap hari dengan bahan berkualitas</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="cake3.jpg" class="d-block w-100" alt="Cupcake">
+                        <div class="carousel-caption">
+                            <h5 class="animate-title">Manisnya Kebersamaan</h5>
+                            <p>Buat momen spesialmu lebih manis bersama Naory Bakery</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#cakeCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cakeCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Produk Section dengan Card -->
+        <section id="produk" class="produk-section py-5">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Menu Andalan Kami</h2>
+                    <p class="section-subtitle">Dibuat dengan cinta dan bahan pilihan</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card product-card h-100">
+                            <img src="lavacake.jpg" class="card-img-top" alt="Chocolate Lava">
+                            <div class="card-body">
+                                <h5 class="card-title">Chocolate Lava Cake</h5>
+                                <p class="card-text">Lumer coklat di dalam, lembut di luar. Sempurna untuk pecinta coklat.</p>
+                                <div class="price">Rp 55.000</div>
+                                <button class="btn order-btn" data-product="Chocolate Lava Cake" data-price="55000">Pesan Sekarang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card product-card h-100">
+                            <img src="redvelvet.jpg" class="card-img-top" alt="Red Velvet">
+                            <div class="card-body">
+                                <h5 class="card-title">Red Velvet Cake</h5>
+                                <p class="card-text">Warna merah elegan dengan cream cheese frosting yang creamy.</p>
+                                <div class="price">Rp 65.000</div>
+                                <button class="btn order-btn" data-product="Red Velvet Cake" data-price="65000">Pesan Sekarang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="card product-card h-100">
+                            <img src="cheesecake.jpg" class="card-img-top" alt="Cheesecake">
+                            <div class="card-body">
+                                <h5 class="card-title">New York Cheesecake</h5>
+                                <p class="card-text">Tekstur creamy dan rasa keju yang kaya, dengan topping blueberry.</p>
+                                <div class="price">Rp 70.000</div>
+                                <button class="btn order-btn" data-product="New York Cheesecake" data-price="70000">Pesan Sekarang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="card product-card h-100">
+                            <img src="cupcake.jpg" class="card-img-top" alt="Cupcake">
+                            <div class="card-body">
+                                <h5 class="card-title">Cupcake Rainbow</h5>
+                                <p class="card-text">Cupcake lembut dengan buttercream warna-warni, cocok untuk pesta.</p>
+                                <div class="price">Rp 25.000</div>
+                                <button class="btn order-btn" data-product="Cupcake Rainbow" data-price="25000">Pesan Sekarang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="card product-card h-100">
+                            <img src="blackforest.jpg" class="card-img-top" alt="Black Forest">
+                            <div class="card-body">
+                                <h5 class="card-title">Black Forest</h5>
+                                <p class="card-text">Kue coklat dengan lapisan cherry dan whipped cream yang lembut.</p>
+                                <div class="price">Rp 85.000</div>
+                                <button class="btn order-btn" data-product="Black Forest" data-price="85000">Pesan Sekarang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="card product-card h-100">
+                            <img src="donuts.jpg" class="card-img-top" alt="Donat">
+                            <div class="card-body">
+                                <h5 class="card-title">Donat Glaze</h5>
+                                <p class="card-text">Donat empuk dengan lapisan glaze vanilla dan topping sprinkles.</p>
+                                <div class="price">Rp 15.000</div>
+                                <button class="btn order-btn" data-product="Donat Glaze" data-price="15000">Pesan Sekarang</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- ==================== TRANSAKSI / PEMESANAN ==================== -->
+        <section id="transaksi" class="transaksi-section py-5">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Pesan Sekarang</h2>
+                    <p class="section-subtitle">Isi form di bawah untuk memesan kue favorit Anda</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7" data-aos="fade-right">
+                        <div class="order-form-card">
+                            <h4 class="mb-4">Detail Pemesanan</h4>
+                            <form id="orderForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Nama Lengkap</label>
+                                        <input type="text" class="form-control" id="orderNama" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Nomor WhatsApp</label>
+                                        <input type="tel" class="form-control" id="orderTelp" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Pilih Produk</label>
+                                    <select class="form-control" id="orderProduk" required>
+                                        <option value="">-- Pilih Kue --</option>
+                                        <option value="Chocolate Lava Cake" data-price="55000">Chocolate Lava Cake - Rp 55.000</option>
+                                        <option value="Red Velvet Cake" data-price="65000">Red Velvet Cake - Rp 65.000</option>
+                                        <option value="New York Cheesecake" data-price="70000">New York Cheesecake - Rp 70.000</option>
+                                        <option value="Cupcake Rainbow" data-price="25000">Cupcake Rainbow - Rp 25.000</option>
+                                        <option value="Black Forest" data-price="85000">Black Forest - Rp 85.000</option>
+                                        <option value="Donat Glaze" data-price="15000">Donat Glaze - Rp 15.000</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Jumlah</label>
+                                        <input type="number" class="form-control" id="orderJumlah" min="1" value="1" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Metode Pembayaran</label>
+                                        <select class="form-control" id="orderMetode" required>
+                                            <option value="QRIS">QRIS (Scan QR Code)</option>
+                                            <option value="Transfer Bank">Transfer Bank (BCA/Mandiri)</option>
+                                            <option value="COD">COD (Bayar di Tempat)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Alamat Pengiriman</label>
+                                    <textarea class="form-control" id="orderAlamat" rows="2" placeholder="Jl. Contoh No. 123, Kota, Kode Pos" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Catatan (opsional)</label>
+                                    <textarea class="form-control" id="orderCatatan" rows="2" placeholder="Misal: tingkat kemanisan, tambah topping, dll"></textarea>
+                                </div>
+                                <div class="order-total mb-3">
+                                    <span>Total Pembayaran:</span>
+                                    <strong id="totalBayar">Rp 0</strong>
+                                </div>
+                                <button type="submit" class="btn submit-btn w-100">Proses Pemesanan</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-5" data-aos="fade-left">
+                        <div class="payment-card">
+                            <h4 class="mb-3">Pembayaran via QRIS</h4>
+                            <p class="text-muted small">Scan QR Code di bawah untuk pembayaran cepat</p>
+                            <div class="qris-container text-center">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=NAORYBAKERY-099287364182" alt="QRIS Naory Bakery" class="qris-img" id="qrisImg">
+                                <p class="mt-2 small">Scan menggunakan Gopay, OVO, DANA, atau Bank Mobile</p>
+                                <button type="button" class="btn btn-sm btn-outline-secondary mt-1" onclick="downloadQRIS()">Download QRIS</button>
+                            </div>
+                            <div class="bank-info mt-4">
+                                <p><strong>Transfer Manual:</strong></p>
+                                <p>BCA: 123 456 7890 a.n Naory Bakery</p>
+                                <p>Mandiri: 987 654 3210 a.n Naory Bakery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== LACAK PESANAN + PETA ==================== -->
+        <section id="lacak" class="lacak-section py-5">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Lacak Pesanan</h2>
+                    <p class="section-subtitle">Masukkan kode pesanan untuk melihat status pengiriman</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 mb-4" data-aos="fade-right">
+                        <div class="track-card">
+                            <div class="input-group mb-4">
+                                <input type="text" class="form-control" id="trackingCode" placeholder="Masukkan kode pesanan (contoh: NAORY-001)">
+                                <button class="btn submit-btn" onclick="trackOrder()">Lacak</button>
+                            </div>
+                            <div id="trackingResult" style="display: none;">
+                                <div class="tracking-status">
+                                    <h5 id="trackNama"></h5>
+                                    <p id="trackProduk"></p>
+                                    <p id="trackAlamat"></p>
+                                    <div class="status-timeline mt-3">
+                                        <div class="status-step" id="status1">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Pesanan Diterima</span>
+                                        </div>
+                                        <div class="status-step" id="status2">
+                                            <i class="fas fa-hourglass-half"></i>
+                                            <span>Sedang Dibuat</span>
+                                        </div>
+                                        <div class="status-step" id="status3">
+                                            <i class="fas fa-truck"></i>
+                                            <span>Dalam Perjalanan</span>
+                                        </div>
+                                        <div class="status-step" id="status4">
+                                            <i class="fas fa-home"></i>
+                                            <span>Telah Sampai</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="trackingNotFound" class="alert alert-warning" style="display: none;">
+                                <i class="fas fa-search"></i> Kode pesanan tidak ditemukan. Silakan cek kembali.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="map-card">
+                            <h5 class="mb-3">Lokasi Toko & Estimasi Pengiriman</h5>
+                            <div id="map" style="height: 350px; border-radius: 20px; overflow: hidden;"></div>
+                            <p class="small text-muted mt-2"><i class="fas fa-map-marker-alt"></i> Lokasi toko: Jl. Kenangan Indah No. 123, Jakarta Selatan</p>
+                            <div class="delivery-info mt-3">
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <i class="fas fa-motorcycle fa-2x"></i>
+                                        <p class="small mt-1">Gratis Ongkir<br>Jarak 3km</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fas fa-clock fa-2x"></i>
+                                        <p class="small mt-1">Estimasi<br>30-60 menit</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fas fa-box fa-2x"></i>
+                                        <p class="small mt-1">Pesanan<br>Dilacak Real-time</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tentang Section -->
+        <section id="tentang" class="tentang-section py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <img src="tokokue.jpg" alt="Toko Naory Bakery" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <h2 class="section-title">Tentang Naory Bakery</h2>
+                        <p class="about-text">Didirikan dengan semangat menghadirkan kebahagiaan melalui kue-kue berkualitas, Naory Bakery menggunakan bahan-bahan alami terbaik tanpa pengawet. Setiap kue dibuat dengan penuh ketelitian dan cinta, sehingga menghasilkan rasa yang autentik dan menggugah selera.</p>
+                        <p class="about-text">Kami percaya bahwa kue yang lezat dapat menciptakan momen manis dan kenangan indah bersama orang tersayang.</p>
+                        <div class="mt-4">
+                            <i class="fas fa-heart text-danger me-2"></i> Made with love
+                            <i class="fas fa-coffee ms-3 me-2"></i> Fresh every day
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SARAN DARI PEMBELI ==================== -->
+        <section id="saran" class="saran-section py-5">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Saran & Masukan</h2>
+                    <p class="section-subtitle">Kami senang mendengar pendapat Anda</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-5 mb-4" data-aos="fade-right">
+                        <div class="saran-form-card">
+                            <h4 class="mb-3">Kirim Saran Anda</h4>
+                            <form id="saranForm">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="namaPengirim" placeholder="Nama Anda" required>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="isiSaran" rows="4" placeholder="Tulis saran, kritik, atau masukan untuk Naory Bakery..." required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-control" id="kategoriSaran">
+                                        <option value="Saran">💡 Saran</option>
+                                        <option value="Kritik">📝 Kritik</option>
+                                        <option value="Pujian">❤️ Pujian</option>
+                                        <option value="Menu Baru">🍰 Ide Menu Baru</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn submit-btn w-100">Kirim Saran</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="saran-list-card">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="mb-0">Pesan dari Pembeli</h4>
+                                <span class="saran-count" id="saranCount">0 saran</span>
+                            </div>
+                            <div id="saranListContainer" class="saran-list">
+                                <div class="empty-saran text-center py-5">
+                                    <i class="fas fa-comment-dots fa-3x mb-3" style="color: #d9b48b;"></i>
+                                    <p>Belum ada saran. Jadilah yang pertama!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak Section -->
+        <section id="kontak" class="kontak-section py-5">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title">Hubungi Kami</h2>
+                    <p class="section-subtitle">Pesan sekarang atau kunjungi toko kami</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <div class="contact-info">
+                            <p><i class="fas fa-map-marker-alt"></i> Jl. Kenangan Indah No. 123, Jakarta Selatan</p>
+                            <p><i class="fab fa-whatsapp"></i> +62 812 3456 7890</p>
+                            <p><i class="far fa-envelope"></i> hello@Naorybakery.com</p>
+                            <p><i class="far fa-clock"></i> Buka Setiap Hari: 08.00 - 21.00</p>
+                        </div>
+                        <div class="social-icons mt-4">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left">
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Nama Anda" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Pesan / Pertanyaan"></textarea>
+                            </div>
+                            <button type="submit" class="btn submit-btn">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Naory Bakery</h5>
+                    <p>Menyajikan kue terbaik dengan cinta dan kualitas terbaik sejak 2020.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Menu Populer</h5>
+                    <ul class="footer-links">
+                        <li>Chocolate Lava Cake</li>
+                        <li>Red Velvet Cake</li>
+                        <li>New York Cheesecake</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Ikuti Kami</h5>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 Naory Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
